@@ -1,38 +1,11 @@
 terraform {
+  required_version = ">= 1.0"
   required_providers {
-    vercel = {
-      source  = "vercel/vercel"
-      version = "~> 1.0"
+    local = {
+      source  = "hashicorp/local"
+      version = "~> 2.0"
     }
   }
-}
-
-provider "vercel" {
-  # Set VERCEL_API_TOKEN environment variable
-}
-
-# Vercel Project
-resource "vercel_project" "survival_game" {
-  name      = "terraform-survivor-${var.environment}"
-  framework = "other"
-
-  git_repository = {
-    type = "github"
-    repo = var.github_repo # e.g., "username/terraform-survivor"
-  }
-
-  environment = [
-    {
-      key    = "GAME_ENVIRONMENT"
-      value  = var.environment
-      target = ["production", "preview"]
-    },
-    {
-      key    = "GAME_DIFFICULTY"
-      value  = var.difficulty
-      target = ["production", "preview"]
-    }
-  ]
 }
 
 # Generate config.js based on environment
@@ -52,18 +25,12 @@ resource "local_file" "game_config" {
     starting_wood       = var.starting_resources.wood
     starting_stone      = var.starting_resources.stone
     starting_food       = var.starting_resources.food
-    version             = var.version
+    version             = var.game_version
   })
 }
 
-# Deployment
-resource "vercel_deployment" "survival_game" {
-  project_id = vercel_project.survival_game.id
-  files      = {
-    "index.html" = file("${path.module}/index.html")
-    "style.css"  = file("${path.module}/style.css")
-    "game.js"    = file("${path.module}/game.js")
-    "config.js"  = local_file.game_config.content
-  }
-  production = var.environment == "production"
+# Output the generated config path
+output "config_file_path" {
+  value       = local_file.game_config.filename
+  description = "Path to the generated game configuration file"
 }

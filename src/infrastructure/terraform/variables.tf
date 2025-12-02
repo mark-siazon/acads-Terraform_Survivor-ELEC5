@@ -26,7 +26,7 @@ variable "github_repo" {
   default     = ""
 }
 
-variable "version" {
+variable "game_version" {
   description = "Game version"
   type        = string
   default     = "1.0.0"

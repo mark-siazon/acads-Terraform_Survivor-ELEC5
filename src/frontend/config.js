@@ -2,19 +2,19 @@
 // Environment-specific configuration
 
 const CONFIG = {
-    environment: "development",
-    difficulty: "normal",
+    environment: "production",
+    difficulty: "hard",
     startingResources: {
-        wood: 5,
-        stone: 3,
-        food: 2
+        wood: 3,
+        stone: 2,
+        food: 1
     },
     gameSettings: {
-        hungerDecayRate: 2,
-        thirstDecayRate: 3,
-        energyDecayRate: 1.5,
-        resourceMultiplier: 1.0,
-        dangerLevel: 0.3
+        hungerDecayRate: 3,
+        thirstDecayRate: 4,
+        energyDecayRate: 2,
+        resourceMultiplier: 0.8,
+        dangerLevel: 0.5
     },
     features: {
         craftingEnabled: true,

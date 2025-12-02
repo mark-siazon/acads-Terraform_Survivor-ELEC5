@@ -21,4 +21,4 @@ features = {
   random_events    = false
 }
 
-version = "1.0.0-dev"
+game_version = "1.0.0-dev"
