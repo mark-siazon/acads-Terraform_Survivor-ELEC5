@@ -1,8 +1,14 @@
+<div align="center">
+
+![Terraform Survivor Banner](docs/assets/banner.svg)
+
 # 🏔️ Terraform Survivor
 
 > Infrastructure as Code meets Survival RPG
 
 A browser-based survival game where **Terraform controls the difficulty**. Demonstrates clean architecture, component design, and IaC principles.
+
+</div>
 
 ## 🎮 Play Now
 

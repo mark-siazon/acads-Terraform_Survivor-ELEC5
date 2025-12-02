@@ -1,0 +1,91 @@
+<svg width="1280" height="640" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d4059;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bgGradient)"/>
+  
+  <!-- Mountain Silhouettes -->
+  <polygon points="0,640 0,400 200,300 400,350 600,250 800,320 1000,280 1200,350 1280,300 1280,640" 
+           fill="url(#mountainGradient)" opacity="0.6"/>
+  <polygon points="0,640 0,450 150,380 350,420 550,340 750,400 950,360 1150,420 1280,380 1280,640" 
+           fill="url(#mountainGradient)" opacity="0.8"/>
+  
+  <!-- Stars -->
+  <circle cx="100" cy="80" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="250" cy="120" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="400" cy="60" r="2" fill="#ffffff" opacity="0.9"/>
+  <circle cx="600" cy="100" r="1.5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="800" cy="70" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="1000" cy="110" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="1150" cy="90" r="2" fill="#ffffff" opacity="0.9"/>
+  
+  <!-- Game UI Elements Background -->
+  <rect x="50" y="480" width="200" height="120" rx="10" fill="#1a1a2e" opacity="0.7"/>
+  <rect x="1030" y="480" width="200" height="120" rx="10" fill="#1a1a2e" opacity="0.7"/>
+  
+  <!-- Main Title -->
+  <text x="640" y="240" font-family="Arial, sans-serif" font-size="80" font-weight="bold" 
+        fill="#4a9eff" text-anchor="middle">
+    🏔️ TERRAFORM SURVIVOR
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="640" y="300" font-family="Arial, sans-serif" font-size="32" 
+        fill="#e0e0e0" text-anchor="middle">
+    Infrastructure as Code meets Survival RPG
+  </text>
+  
+  <!-- Feature Badges -->
+  <g transform="translate(640, 360)">
+    <!-- Terraform Badge -->
+    <rect x="-280" y="0" width="160" height="40" rx="20" fill="#7b42bc" opacity="0.9"/>
+    <text x="-200" y="27" font-family="Arial, sans-serif" font-size="18" 
+          fill="#ffffff" text-anchor="middle" font-weight="bold">
+      🔧 Terraform
+    </text>
+    
+    <!-- Browser Game Badge -->
+    <rect x="-100" y="0" width="180" height="40" rx="20" fill="#4a9eff" opacity="0.9"/>
+    <text x="-10" y="27" font-family="Arial, sans-serif" font-size="18" 
+          fill="#ffffff" text-anchor="middle" font-weight="bold">
+      🎮 Browser Game
+    </text>
+    
+    <!-- No Backend Badge -->
+    <rect x="100" y="0" width="180" height="40" rx="20" fill="#00d9ff" opacity="0.9"/>
+    <text x="190" y="27" font-family="Arial, sans-serif" font-size="18" 
+          fill="#1a1a2e" text-anchor="middle" font-weight="bold">
+      ⚡ No Backend
+    </text>
+  </g>
+  
+  <!-- Left UI Panel - Stats -->
+  <text x="150" y="510" font-family="monospace" font-size="14" fill="#ff6b6b">❤️ Health: 100</text>
+  <text x="150" y="535" font-family="monospace" font-size="14" fill="#ffd93d">🍖 Hunger: 100</text>
+  <text x="150" y="560" font-family="monospace" font-size="14" fill="#6bcfff">💧 Thirst: 100</text>
+  <text x="150" y="585" font-family="monospace" font-size="14" fill="#95e1d3">⚡ Energy: 100</text>
+  
+  <!-- Right UI Panel - Inventory -->
+  <text x="1130" y="510" font-family="monospace" font-size="14" fill="#e0e0e0">Inventory:</text>
+  <text x="1130" y="535" font-family="monospace" font-size="14" fill="#d4a574">🪵 Wood: 5</text>
+  <text x="1130" y="560" font-family="monospace" font-size="14" fill="#a8a8a8">🪨 Stone: 3</text>
+  <text x="1130" y="585" font-family="monospace" font-size="14" fill="#ff9999">🍖 Meat: 2</text>
+  
+  <!-- Footer -->
+  <text x="640" y="620" font-family="Arial, sans-serif" font-size="16" 
+        fill="#808080" text-anchor="middle" opacity="0.8">
+    GitHub Pages • Terraform • JavaScript • No Dependencies
+  </text>
+</svg>
